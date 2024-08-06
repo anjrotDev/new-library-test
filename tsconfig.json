@@ -13,8 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": true, // Cambiar a false para permitir la emisión de declaraciones
     "jsx": "react-jsx",
+    "declaration": true, // Asegúrate de que la declaración esté habilitada
+    "outDir": "dist",
 
     /* Linting */
     "strict": true,
@@ -22,5 +24,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

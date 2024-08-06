@@ -1,7 +1,7 @@
 import { FC, forwardRef, HTMLAttributes } from "react";
 import { cn } from "../utils/util";
 
-interface StackProps extends HTMLAttributes<HTMLDivElement> {
+export interface StackProps extends HTMLAttributes<HTMLDivElement> {
   col?: boolean;
   spacing?: number;
 }

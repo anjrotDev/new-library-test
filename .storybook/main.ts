@@ -7,11 +7,22 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
+    "@storybook/addon-interactions"
   ],
   framework: {
     name: "@storybook/react-vite",
-    options: {},
+    options: {}
   },
+  core: {
+    builder: "@storybook/builder-vite"
+  },
+  async viteFinal(config) {
+    // Ajustar la configuración para evitar conflictos
+    config.optimizeDeps = {
+      ...(config.optimizeDeps || {}),
+      exclude: ["vite-plugin-dts"]
+    };
+    return config;
+  }
 };
 export default config;

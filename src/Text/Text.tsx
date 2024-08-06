@@ -42,9 +42,9 @@ const textStyles = cva("w-full", {
   }
 });
 
-type TextProps<C extends ElementType> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof textStyles>>;
+export type TextProps<C extends ElementType> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof textStyles>>;
 
-type TextComponent = <C extends ElementType = "p">(props: TextProps<C>) => ReactElement | null;
+export type TextComponent = <C extends ElementType = "p">(props: TextProps<C>) => ReactElement | null;
 
 export const Text: TextComponent = forwardRef(
   <C extends ElementType = "p">(
