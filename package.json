@@ -61,7 +61,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "STORYBOOK_BUILD=true storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_dcbc34a157a0d1e"
+    "chromatic": "npx chromatic --project-token=chpt_dcbc34a157a0d1e",
+    "commit": "cz"
   },
   "peerDependencies": {
     "react": "^18.3.1",
@@ -89,6 +90,8 @@
     "chromatic": "^11.7.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
@@ -103,5 +106,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-plugin-dts": "^4.0.0-beta.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
