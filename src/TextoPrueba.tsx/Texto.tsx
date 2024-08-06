@@ -47,11 +47,11 @@ type TextProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<C
 type TextComponent = <C extends React.ElementType = "p">(props: TextProps<C>) => React.ReactElement | null;
 
 export const Text: TextComponent = forwardRef(
-  <C extends React.ElementType = "p">(
+  <C extends React.ElementType = "span">(
     { as, align, size, emphasis, italic, underline, weight, className, ...props }: TextProps<C>,
     ref?: PolymorphicRef<C>
   ) => {
-    const Component = as || "p";
+    const Component = as || "span";
 
     return (
       <Component
